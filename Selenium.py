@@ -28,7 +28,6 @@ download_path_motor = r"C:\Users\user\OneDrive - yuntech.edu.tw\文件\Python Sc
 
 
 # 產生一個空的資料夾到指定路徑
-
 import os
 if not os.path.exists(download_path_electronic):
     os.makedirs(download_path_electronic)
@@ -81,7 +80,6 @@ for i in year:
 
 
 # 機車
-
 for i in year:
     option_motor = webdriver.ChromeOptions()
     prefs = {"download.default_directory": download_path_motor}
