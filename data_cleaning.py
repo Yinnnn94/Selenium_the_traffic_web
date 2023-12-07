@@ -44,6 +44,9 @@ for file in os.listdir(Path(root, 'motor')):
 concat_data['Year'] = year_np.reshape(-1, 1)
 concat_data['Vehicle_type'] = elc_np.reshape(-1, 1)
 concat_data = concat_data.reset_index(drop = True)
+concat_data['death_rate'] = concat_data['Death_toll'] / concat_data['Frequency'] # 死亡人數 / 事故數
+concat_data['injury_rate'] = concat_data['Injuries'] / concat_data['Frequency'] # 受傷人數 / 事故數
 concat_data.to_csv(Path(root, 'concat_data.csv'), encoding = 'Big5', index = False)
+print(concat_data)
 
 
